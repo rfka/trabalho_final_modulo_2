@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anos Dourados</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+
+  <div class="tudo">
+    {% include 'header.html' %}
+
+    <div class="bloco">
+      <h2>{{desenho.nome}}</h2>
+     </div>
+
+     <div class="bloco">
+      <iframe width="640" height="480" src="{{desenho.trailer_desenho}}" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>

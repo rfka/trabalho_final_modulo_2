@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crud - Update</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="../static/pages/update.css" />
+  <link rel="stylesheet" href="../static/pages/create.css" />
+</head>
+
+<body>
+  <div class="tudo">
+    {% include 'header.html' %}
+
+    {% if sucesso%}
+
+    <div class="bloco sucesso">
+      <p>Registro editado com sucesso!</p>
+    </div>
+
+    {% endif %}
+
+    <div class="bloco">
+      <h2>Editar Registo</h2>
+    </div>
+
+    <div class="bloco">
+      <form class="form" method="POST">
+        <div class="bloco form_input">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" value="{{desenho.nome}}" />
+        </div>
+
+        <div class="bloco form_input">
+          <label for="url_imagem">URL da Imagem:</label>
+          <input type="text" id="url_imagem" name="url_imagem" value="{{desenho.url_imagem}}" />
+        </div>
+        <div class="bloco form_input">
+          <label for="ano_lancamento">Ano Lançamento:</label>
+          <input type="text" id="ano_lancamento" name="ano_lancamento" value="{{desenho.ano_lancamento}}" required>
+        </div>
+        <div class="bloco form_input">
+          <label for="url trailer">URL do Trailer:</label>
+          <input type="text" id="trailer_desenho" name="trailer_desenho" value="{{desenho.trailer_desenho}}" />
+        </div>
+
+        <div class="bloco form_input">
+          <label for="infancia do">Infância do:</label>
+          <input type="text" id="infancia_do" name="infancia_do" value="{{desenho.infancia_do}}" />
+        </div>
+
+        <div class="bloco form_input">
+          <input type="submit" class="botao" value="Enviar" />
+        </div>
+      </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anos Dourados</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/pages/create.css">
+    <!-- <link rel="stylesheet" href="../static/pages/read_single.css"> -->
+</head>
+
+
+<body>
+
+    <div class="tudo">
+
+        {% include 'header.html' %}
+
+        <div class="bloco">
+            <h2>Inserir Desenhos</h2>
+        </div>
+
+        {% if id_atribuido %}
+
+        <div class="bloco">
+
+            <p>Desenho inserido com sucesso!</br>
+                <br>
+                O ID atribuido foi <span class="id_atribuido">{{ id_atribuido}}</span>.<br>
+                <a href="/read/{{ id_atribuido}}" class="botao">Visualizar Desenho</a>
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="bloco">
+            <form class="form" method="POST">
+                <div class="bloco form_input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="bloco form_input">
+                    <label for="url_imagem">URL da Imagem:</label>
+                    <input type="text" id="url_imagem" name="url_imagem" required>
+                </div>
+
+                <div class="bloco form_input">
+                    <label for="ano_lancamento">Ano Lançamento:</label>
+                    <input type="text" id="ano_lancamento" name="ano_lancamento" required>
+                </div>
+
+                <div class="bloco form_input">
+                    <label for="trailer_desenho">URL do Trailer:</label>
+                    <input type="text" id="trailer_desenho" name="trailer_desenho" required>
+                </div>
+
+                <div class="bloco form_input">
+                    <label for="infancia_do">Infância do:</label>
+                    <input type="text" id="infancia_do" name="infancia_do" required>
+                </div>
+
+                <div class="bloco form_input">
+
+                    <input type="submit" class="botao" value="Enviar">
+
+                </div>
+            </form>
+        </div>
+
+        {% endif %}
+    </div>
+</body>
+
+</html>

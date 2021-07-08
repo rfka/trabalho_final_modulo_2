@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anos Dourados</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/pages/read_all.css">
+</head>
+<body>
+  
+  <div class="tudo">
+    {% include 'header.html' %}
+
+    <div class="bloco">
+      <h2>Visualizando todos</h2>
+    </div>
+
+    <div class="bloco">
+      <table class="tabela">
+        <tr class="tabela_header">
+          <td>ID</td>
+            <td>Nome Desenho</td>
+            <td>Ano Lançamento</td>
+            <td>Imagem</td>
+            <td>Infância do</td>
+            <td>Ações</td>
+        </tr>
+
+        <tbody>
+          {% for desenho in listaDeDesenhos %}
+            <tr>
+              <td>{{desenho.id}}</td>
+              <td>{{desenho.nome}}</td>
+              <td>{{desenho.ano_lancamento}}</td>
+              <td>
+                <img src="{{desenho.url_imagem}}" alt="{{desenho.nome}}">
+              </td>
+              <td>{{desenho.infancia_do}}</td>
+              <td>
+                <a href="/read/{{desenho.id}}" class="botao">Visualizar</a>
+                <a href="/update/{{desenho.id}}" class="botao">Atualizar</a>
+                <a href="/delete/{{desenho.id}}" class="botao">Deletar</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

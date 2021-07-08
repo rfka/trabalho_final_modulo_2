@@ -1,0 +1,32 @@
+.tabela {
+    border: 1px solid #ddcbcb;
+    border-spacing: 0;
+    margin: 0 50px 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tabela tr:nth-child(even) td {
+    background: rgba(16, 118, 186, 0.631);
+    border-radius: 10px;
+}
+
+.tabela td {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tabela_header td {
+    font-weight: bold;
+    text-shadow: 0 0.5px 0 gray;
+    background-color: rgba(16, 118, 186, 0.631)
+}
+
+img {
+    max-width: 230px;
+    max-height: 200px;
+}
+
+
+/*max-width: 200px;
+    max-height: 100px;
